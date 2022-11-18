@@ -1,6 +1,6 @@
 import { editEvent } from '@jiter/node';
 import { Handler } from 'express';
-import { ReturnGroceriesEvent } from '../../../types';
+import { ReturnGroceriesEvent } from '../../types';
 
 /**
  * Express handler for PUT /api/events/EVENT_ID

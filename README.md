@@ -1,10 +1,14 @@
-# Jiter + Express + TypeScript example
+# Jiter + Sendgrid
 
-A basic API for learning how to integrate your app with the Jiter API
+A basic API for learning how to integrate your app with the Jiter API to send Sendgrid emails more than 3 days in advance.
+
+Forked from [`Jiter-Node-Example`](https://github.com/Pantheon-Labs/Jiter-Node-Example)
 
 ## What does the app do?
 
-This app exposes API routes which allow a user to create reminders to purchase groceries, edit reminders, and receive reminders all using Jiter events.
+The original app exposes API routes which allow a user to create reminders to purchase groceries, edit reminders, and receive reminders all using Jiter events.
+
+This modification creates a follow-up reminder
 
 ## Setup
 

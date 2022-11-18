@@ -1,6 +1,6 @@
 import { createEvent } from '@jiter/node';
 import { Handler } from 'express';
-import { BuyGroceriesEvent } from '../../types';
+import { BuyGroceriesEvent } from '../types/groceries';
 
 /**
  * Express handler for POST /api/events

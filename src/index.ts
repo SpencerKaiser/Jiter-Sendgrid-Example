@@ -4,8 +4,11 @@ import express from 'express';
 import axios from 'axios';
 import Jiter from '@jiter/node';
 import { api } from './api';
+import { initSendgrid } from './utils/initSendgrid';
 
 dotenv.config();
+
+initSendgrid();
 
 const app = express();
 app.use(express.json());
@@ -54,5 +57,7 @@ app.listen(port, async () => {
         '🚨 Your BASE_URL appears to be offline; did you start your ngrok server and update your .env? See the README for more info.',
       );
     }
+    // Create space in the console in order to see updates as events occur
+    console.log('\n');
   }
 });
