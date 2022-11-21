@@ -7,7 +7,7 @@ import { Handler } from 'express';
  */
 export const get: Handler = async (req, res) => {
   try {
-    // See https://docs.jiter.dev/docs/rest-api/get-event-info
+    // See https://docs.jiter.dev/get-event
     const event = await getEvent({
       id: req.params.eventId,
     });

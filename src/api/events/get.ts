@@ -7,7 +7,7 @@ import { Handler } from 'express';
  */
 export const get: Handler = async (req, res) => {
   try {
-    // See https://docs.jiter.dev/docs/rest-api/get-many-events
+    // See https://docs.jiter.dev/get-many-events
     const allEvents = await getManyEvents();
     res.send(allEvents);
   } catch (error: any) {

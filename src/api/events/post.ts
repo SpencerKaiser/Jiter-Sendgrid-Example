@@ -14,7 +14,7 @@ export const post: Handler = async (req, res) => {
       items: ['eggs', 'bacon', 'pasta', 'bread'],
     };
 
-    // See https://docs.jiter.dev/docs/rest-api/create-event
+    // See https://docs.jiter.dev/create-an-event
     const createdEvent = await createEvent({
       destination: `${process.env.BASE_URL}/api/webhooks/groceries`,
       payload: JSON.stringify(payload),
