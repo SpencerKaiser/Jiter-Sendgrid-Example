@@ -16,7 +16,7 @@ export const put: Handler = async (req, res) => {
       ],
     };
 
-    // See https://docs.jiter.dev/docs/rest-api/update-event
+    // See https://docs.jiter.dev/update-event
     const updatedEvent = await editEvent({
       id: req.params.id,
       payload: JSON.stringify(payload),
