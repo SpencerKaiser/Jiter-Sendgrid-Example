@@ -32,6 +32,7 @@ export const post: Handler = async (req, res) => {
     // Schedule a reminder for "one week" from now (shortened for demo purposes)
     const oneWeekFromNow = dayjs().add(1, 'minute').toISOString();
 
+    // See https://docs.jiter.dev/create-an-event
     const createdEvent = await createEvent({
       destination: `${process.env.BASE_URL}/api/webhooks/reminders`,
       payload: JSON.stringify(payload),

@@ -18,7 +18,7 @@ const baseUrl = process.env.BASE_URL;
 
 // Jiter Initialization
 try {
-  // See https://docs.jiter.dev/docs/getting-started
+  // See https://docs.jiter.dev/getting-started
   Jiter.init({
     apiKey: process.env.JITER_API_KEY ?? '',
     signingSecret: process.env.JITER_SIGNING_SECRET ?? '',
