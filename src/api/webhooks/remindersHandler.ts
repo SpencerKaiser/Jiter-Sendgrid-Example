@@ -4,16 +4,12 @@ import { ReminderEvent } from '../types';
 
 export const remindersHandler = Jiter.Middleware.webhookHandler<ReminderEvent>(
   async ({ payload }) => {
-    const toEmail = process.env.TO_EMAIL;
-    if (!toEmail) {
-      console.error('Unable to send email; TO_EMAIL not set in .env');
-      return;
-    }
+    const { items, toEmail } = payload;
 
     await sendEmail({
       toEmail,
       subject: 'Scheduled reminder from Jiter',
-      content: `Have you purchased your groceries? Here's what you were supposed to buy: ${payload.items.join(
+      content: `You purchased groceries a week ago... Need to restock yet?\n\nHere's what you bought last time: ${items.join(
         ', ',
       )}\n\nThis is your one week reminder, which was queued >3 days in advance through the magic of Jiter 🎉`,
     });

@@ -1,3 +1,3 @@
 import { BuyGroceriesEvent } from './groceries';
 
-export type ReminderEvent = BuyGroceriesEvent;
+export type ReminderEvent = Pick<BuyGroceriesEvent, 'items'> & { toEmail: string };
